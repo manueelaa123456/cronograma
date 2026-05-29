@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap");
 
 :root {
-  --cor-de-fundo: #1e1e1e;
-  --verde: #6fff57;
+  --cor-de-fundo: #e495d7;
+  --rosa: #ff57b9;
   --branco: #ffffff;
-  --botao-ativo: #3a375e;
+  --botao-ativo: #d478c8;
   --botao-inativo: rgba(58, 55, 94, 0.5);
   --texto-fundo: rgba(58, 55, 94, 0.3);
 }
@@ -59,24 +59,44 @@ body {
   display: block;
 }
 @media screen and (min-width: 768px) {
-  /* Código omitido */
-
-  .botao:last-child {
+  .botoes {
+    display: flex;
+  }
+    .botao:first-child {
+    border-radius: 40px 0 0 0;
+  }
+    .botao:last-child {
     border-radius: 0 40px 0 0;
   }
-}.ativo {
+}
+.ativo {
   background-color: var(--botao-ativo);
   border-bottom: 4px solid var(--verde);
-}botoes[j].classList.remove("ativo");
-textos[j].classList.remove("ativo");
-for (let i = 0; i < botoes.length; i++) {
-  botoes[i].onclick = function () {
-    for (let j = 0; j < botoes.length; j++) {
-      botoes[j].classList.remove("ativo");
-      textos[j].classList.remove("ativo");
-    }
-
-    botoes[i].classList.add("ativo");
-    textos[i].classList.add("ativo");
-  };
+}
+.abas-textos {
+  background-color: var(--texto-fundo);
+}
+.abas-textos {
+  background-color: var(--texto-fundo);
+  padding: 40px;
+  border-radius: 0 0 40px 40px;
+}
+.botao.ativo {
+  background-color: var(--botao-ativo);
+  border-bottom: 4px solid var(--verde);
+}
+.aba-conteudo.ativo {
+  display: block;
+}
+.aba-conteudo-titulo-principal {
+  font-size: 28px;
+  text-align: center;
+}
+.aba-conteudo-titulo-secundario {
+  text-align: center;
+  color: var(--verde);
+  text-transform: uppercase;
+}
+.aba-conteudo {
+  display: none;
 }
